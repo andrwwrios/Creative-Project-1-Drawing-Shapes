@@ -61,36 +61,36 @@ public class Shapes {
     	//this loop creates the star as a whole and increase each side length n
     	for(int n = 20; n <= maxLength; n++ ) { 
     		andrew.left(27); // side 1
+		andrew.forward(n);
+
+		andrew.right(72); // side 2
+		andrew.forward(n);
+
+		andrew.left(144); // side 3
+		andrew.forward(n);
+
+		andrew.right(72); //side 4
+		andrew.forward(n);
+
+		andrew.left(144); //side 5
+		andrew.forward(n);
+
+		andrew.right(72); //side 6
 			andrew.forward(n);
 
-			andrew.right(72); // side 2
-			andrew.forward(n);
+		andrew.left(144); //side 7
+		andrew.forward(n);
 
-			andrew.left(144); // side 3
-			andrew.forward(n);
+		andrew.right(72); //side 8
+		andrew.forward(n);
 
-			andrew.right(72); //side 4
-			andrew.forward(n);
+		andrew.left(144); //side 9
+            	andrew.forward(n);
 
-			andrew.left(144); //side 5
-			andrew.forward(n);
-
-			andrew.right(72); //side 6
-			andrew.forward(n);
-
-			andrew.left(144); //side 7
-			andrew.forward(n);
-
-			andrew.right(72); //side 8
-			andrew.forward(n);
-
-			andrew.left(144); //side 9
-            andrew.forward(n);
-
-            andrew.right(72); //side 10 final side
-            andrew.forward(n); 
+            	andrew.right(72); //side 10 final side
+            	andrew.forward(n); 
             
-            andrew.left(126);
+           	andrew.left(126);
     	} 
     	
     	
@@ -113,10 +113,11 @@ public class Shapes {
 		for (int counter = 1; counter <= count; counter++){ // how many times a shape is created
 			int angle = r.nextInt();
 			int move = r.nextInt(100) + 1; //range 1 - 100 inclusive
-			maxLength = r.nextInt(100) + 1; /* 
-												* square changes size after each iteration
-											    * length size range 1 - 100 both included
-											    */
+			maxLength = r.nextInt(100) + 1; 
+			/* 
+			* square changes size after each iteration
+			* length size range 1 - 100 both included
+			*/
 			//move andrew after every iteration
 			andrew.up();
 			andrew.left(angle); //changes direction a random angle
